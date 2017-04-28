@@ -1,11 +1,12 @@
 global.expect = require('expect');
 
+const babel = require('babel-core');
 const jsdom = require('jsdom');
 const path = require('path');
 
 before(function(done) {
   const src = path.resolve(__dirname, '..', 'index.js');
-  const babelResult = require('babel-core').transformFileSync(src, {
+  const babelResult = babel.transformFileSync(src, {
     presets: ['es2015']
   });
   const html = path.resolve(__dirname, '..', 'index.html');
