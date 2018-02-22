@@ -1,9 +1,9 @@
 var katzDeli = [];
 function takeANumber(katzDeli, name){
-      while (katzDeli.length > 0){
+      if (katzDeli.length > 0);
        katzDeli.push(name);
        return ('Welcome, ' + name + '. You are number ' + katzDeli.length + ' in line.')
-    }}
+    }
 function nowServing(katzDeli){
      if(katzDeli.length===0) { //checks if length of array(katzDeli) is = to 0
      return 'There is nobody waiting to be served!'; //returns string no one is waiting
